@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gelleries",
+  "info": {
+    "singularName": "gellery",
+    "pluralName": "gelleries",
+    "displayName": "gellery"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "imageUrl": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}
