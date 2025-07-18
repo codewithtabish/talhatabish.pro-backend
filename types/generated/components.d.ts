@@ -44,9 +44,23 @@ export interface SharedSeo extends Struct.ComponentSchema {
     name: 'Seo';
   };
   attributes: {
+    canonicalURL: Schema.Attribute.Text;
     metaDescription: Schema.Attribute.Text & Schema.Attribute.Required;
+    metaKeywords: Schema.Attribute.Text & Schema.Attribute.Required;
     metaTitle: Schema.Attribute.String & Schema.Attribute.Required;
-    shareImage: Schema.Attribute.Media<'images'>;
+    ogDescription: Schema.Attribute.Text & Schema.Attribute.Required;
+    ogImage: Schema.Attribute.Text & Schema.Attribute.Required;
+    ogTitle: Schema.Attribute.Text & Schema.Attribute.Required;
+    ogType: Schema.Attribute.Text & Schema.Attribute.Required;
+    ogUrl: Schema.Attribute.Text & Schema.Attribute.Required;
+    robots: Schema.Attribute.Text & Schema.Attribute.Required;
+    structuredData: Schema.Attribute.JSON;
+    twitterCard: Schema.Attribute.Enumeration<
+      ['summary', 'summary_large_image']
+    >;
+    twitterDescription: Schema.Attribute.Text & Schema.Attribute.Required;
+    twitterImage: Schema.Attribute.Text & Schema.Attribute.Required;
+    twitterTitle: Schema.Attribute.Text & Schema.Attribute.Required;
   };
 }
 
@@ -62,6 +76,14 @@ export interface SharedSlider extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedTechStacks extends Struct.ComponentSchema {
+  collectionName: 'components_shared_tech_stacks';
+  info: {
+    displayName: 'techStacks';
+  };
+  attributes: {};
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -70,6 +92,7 @@ declare module '@strapi/strapi' {
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
+      'shared.tech-stacks': SharedTechStacks;
     }
   }
 }

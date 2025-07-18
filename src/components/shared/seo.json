@@ -16,11 +16,59 @@
       "type": "text",
       "required": true
     },
-    "shareImage": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": ["images"]
+    "metaKeywords": {
+      "type": "text",
+      "required": true
+    },
+    "canonicalURL": {
+      "type": "text",
+      "required": false
+    },
+    "ogTitle": {
+      "type": "text",
+      "required": true
+    },
+    "ogDescription": {
+      "type": "text",
+      "required": true
+    },
+    "ogImage": {
+      "type": "text",
+      "required": true
+    },
+    "ogType": {
+      "type": "text",
+      "required": true
+    },
+    "ogUrl": {
+      "type": "text",
+      "required": true
+    },
+    "twitterCard": {
+      "type": "enumeration",
+      "enum": [
+        "summary",
+        "summary_large_image"
+      ]
+    },
+    "twitterTitle": {
+      "type": "text",
+      "required": true
+    },
+    "twitterDescription": {
+      "type": "text",
+      "required": true
+    },
+    "twitterImage": {
+      "type": "text",
+      "required": true
+    },
+    "robots": {
+      "type": "text",
+      "required": true
+    },
+    "structuredData": {
+      "type": "json"
     }
   }
 }
