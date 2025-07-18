@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "crons",
+  "info": {
+    "singularName": "cron",
+    "pluralName": "crons",
+    "displayName": "cron"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

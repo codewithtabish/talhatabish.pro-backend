@@ -410,6 +410,31 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiCronCron extends Struct.CollectionTypeSchema {
+  collectionName: 'crons';
+  info: {
+    displayName: 'cron';
+    pluralName: 'crons';
+    singularName: 'cron';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::cron.cron'> &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiGelleryGellery extends Struct.CollectionTypeSchema {
   collectionName: 'gelleries';
   info: {
@@ -1145,6 +1170,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::cron.cron': ApiCronCron;
       'api::gellery.gellery': ApiGelleryGellery;
       'api::global.global': ApiGlobalGlobal;
       'api::project-category.project-category': ApiProjectCategoryProjectCategory;
