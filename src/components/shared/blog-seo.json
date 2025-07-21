@@ -1,0 +1,75 @@
+{
+  "collectionName": "components_shared_blog_seos",
+  "info": {
+    "displayName": "blogSeo"
+  },
+  "options": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "string",
+      "required": true
+    },
+    "metaDescription": {
+      "type": "text",
+      "required": true
+    },
+    "metaKeywords": {
+      "type": "text",
+      "required": true
+    },
+    "ogTitle": {
+      "type": "text",
+      "required": true
+    },
+    "canonicalURL": {
+      "type": "text",
+      "required": true
+    },
+    "ogDescription": {
+      "type": "text",
+      "required": true
+    },
+    "ogImageUrl": {
+      "type": "string",
+      "required": true
+    },
+    "ogType": {
+      "type": "string",
+      "default": "article"
+    },
+    "ogUrl": {
+      "type": "string",
+      "required": true
+    },
+    "twitterCard": {
+      "type": "enumeration",
+      "required": true,
+      "default": "summary_large_image",
+      "enum": [
+        "summary",
+        "summary_large_image"
+      ]
+    },
+    "twitterTitle": {
+      "type": "string",
+      "required": true
+    },
+    "twitterDescription": {
+      "type": "string",
+      "required": true
+    },
+    "twitterImageUrl": {
+      "type": "string",
+      "required": true
+    },
+    "robots": {
+      "type": "string",
+      "default": "index,follow"
+    },
+    "structuredData": {
+      "type": "json",
+      "required": true
+    }
+  },
+  "config": {}
+}
